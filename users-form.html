@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+  <style>
+    body {
+      
+      background-color: white;
+      font-family: "Arial";
+      /* align-items: center; */
+      
+      padding-top: 10px;
+      padding-bottom: 10px;
+      
+     
+    }
+    .homepage{
+      text-align: center;
+      color:blue;
+    }
+    .wrapper{
+      display: flex;
+      align-items: stretch;
+      justify-content: space-around;
+      width: 100%;
+    }
+    .login {
+      width: 60%;
+      padding-left: 20px;
+      min-height: 100%;
+      margin:0 10px;
+      margin-left: 20px;
+      margin-right: 20px;
+      
+      background: rgb(239, 227, 209);
+      border-radius: 15px;
+      
+     
+      
+    }
+    h2 {
+      text-align: center;
+      color: rgb(5, 29, 109);
+      padding: 20px;
+    }
+    label {
+      color: #ec390c;
+      font-size: 17px;
+    }
+    #Uname {
+      width: 300px;
+      height: 30px;
+      border: none;
+      border-radius: 3px;
+      padding-left: 8px;
+    }
+    #Pass {
+      width: 300px;
+      height: 30px;
+      border: none;
+      border-radius: 3px;
+      padding-left: 8px;
+    }
+    #log {
+      width: 300px;
+      height: 30px;
+      border: none;
+      border-radius: 17px;
+      padding-left: 7px;
+      color: blue;
+    }
+    span {
+      color: white;
+      font-size: 17px;
+    }
+    a {
+      float: center;
+      /* background-color: grey; */
+    }
+    .container {
+      
+      /* overflow: hidden; */
+      background: rgb(239, 227, 209);
+      border-radius: 15px;
+      width: 60%;
+      padding-left: 20px;
+      min-height: 100%;
+      margin:0 10px;
+      margin-right: 20px;
+      margin-left: 20px;
+      /* margin-top: -500px;
+      margin-left: 940px; */
+      
+     
+    }
+    #sub {
+      margin-left: 150px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    #submi {
+      margin-left: 150px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  </style>
+  <head>
+    <title>Users Entry</title>
+    <!-- <link rel="stylesheet" type="text/css" href="users-form.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+  </head>
+  <body>
+    <div>
+      <h2> <a class = "homepage" href = "index.php"> Go to Home page </a></h2>
+    </div>
+    <div class = "wrapper">
+    <div class="login">
+      <h2>Enter Your Details</h2>
+      
+      <form id="login" method="POST" action="login.php">
+        <label>First Name</label>
+        <input
+          type="text"
+          name="FIRSTNAME"
+          id="Fname"
+          placeholder="First Name"
+          required
+          class="form-control"
+          style="margin-bottom: 20px"
+          
+        />
+        
+        <label>Last Name</label>
+        <input
+          type="text"
+          name="LASTNAME"
+          id="Lname"
+          placeholder="Last Name"
+          required
+          class="form-control"
+          style="margin-bottom: 20px"
+        />
+        
+        <label>Email</label>
+        <input
+          type="email"
+          name="EMAIL"
+          id="Email"
+          placeholder="Email"
+          required
+          class="form-control"
+          style="margin-bottom: 20px"
+        />
+        
+        <label>Home Address</label>
+        <input
+          type="text"
+          name="HOMEADDRESS"
+          id="HAddress"
+          placeholder="Home Address"
+          required
+          class="form-control"
+          style="margin-bottom: 20px"
+        />
+        
+        <label>Home Phone</label>
+        <input
+          type="number"
+          name="HOMEPHONE"
+          id="HPhone"
+          placeholder="Home Phone"
+          min="1000000000"
+          max="9999999999"
+          class="form-control"
+          style="margin-bottom: 20px"
+        />
+        
+        <label>Cell Phone</label>
+        <input
+          type="number"
+          name="CELLPHONE"
+          id="CPhone"
+          placeholder="Cell Phone"
+          min="1000000000"
+          max="9999999999"
+          class="form-control"
+          style="margin-bottom: 20px"
+        />
+        
+        <input type="submit" name="log" id="submi" value="Submit" class = "btn btn-success"/>
+        
+      </form>
+    </div>
+    <div class="container">
+      <h2>Enter below fields to search:</h2>
+      <form action="search.php" method="post">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter name"
+          name="fIRSTNAME"
+          style="margin-bottom: 20px"
+        />
+        <label for="email">Email address</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter email"
+          name="eMAIL"
+          style="margin-bottom: 20px"
+        />
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" placeholder="Enter phone"
+        name="cELLPHONE" style="margin-bottom: 20px">
+        <input
+          id="submi"
+          type="submit"
+          class="btn btn-success"
+          name="search"
+          value="search"
+        />
+      </form>
+    </div>
+  </div>
+  </body>
+</html>
